@@ -98,6 +98,7 @@ stages:
               packagesToPack: $(ProjectsToPack)
               packDirectory: $(Build.ArtifactStagingDirectory)/integrationtest
               includesymbols: true
+          - pwsh: 'write-output $(LocalAppData)' 
           - task: PublishPipelineArtifact@0
             inputs:
               artifactName: dir
